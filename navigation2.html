@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Navigation</title>
+
+    <style>
+        /* Загальні стилі */
+        * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        }
+
+        /* Стилі шапки */
+        .header {
+        width: 100%;
+        height: 100px;
+        background: lightskyblue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+
+        /* Стилі основного вмісту */
+        .main {
+        display: flex;
+        flex-wrap: wrap;
+        }
+
+        .column {
+        flex: 1 1 auto;
+        padding: 20px;
+        text-align: center;
+        height: 300px;
+        }
+
+        .column-1 {
+            background: lightpink;
+            flex: 1 1 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .column-2 {
+            background: lightgreen;
+            flex: 1 1 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .column-3 {
+            background: lightyellow;
+            flex: 1 1 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 40px;
+        }
+
+        @media (max-width: 1800px) {
+        
+        .column-1 {
+            background: lightpink;
+            order: 1;
+        }
+
+        .column-2 {
+            background: lightgreen;
+            order: 3;
+        }
+
+        .column-3 {
+            background: lightyellow;
+            order: 2;
+        }
+        }
+        
+        @media (max-width: 1440px) {
+        .main {
+            flex-direction: column;
+        }
+        
+        .column-1 {
+            background: lightpink;
+            order: 2;
+        }
+
+        .column-2 {
+            background: lightgreen;
+            order: 1;
+        }
+
+        .column-3 {
+            background: lightyellow;
+            order: 3;
+        }
+        }
+
+        
+
+        .footer {
+            width: 100%;
+            height: 100px;
+            background: plum;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @media (max-width: 1300px) {
+        
+        }
+    </style>
+</head>
+<body>
+    
+    <header class="header">
+        <h2>Header</h2>
+      </header>
+      
+      <main class="main">
+        <div class="column column-1">
+          <h2>Column 1</h2>
+        </div>
+        
+        <div class="column column-2">
+          <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, quis.</h2>
+        </div>
+        
+        <div class="column column-3">
+          <h2>Column 3</h2>
+        </div>
+      </main>
+      
+      <footer class="footer">
+        <h2>Footer</h2>
+      </footer>
+      <p><a href="index.html">Повернутися</a></p>
+</body>
+</html>
